@@ -14,7 +14,7 @@ export class BoxDataGlobal extends Component {
 
   render() {
     const { data_global } = this.props;
-    const lastUpdate = new Date(data_global._lastUpdate).toLocaleDateString();
+    const lastUpdate = new Date(data_global._lastUpdate).toLocaleString();
     return (
       <div className="box-data box-data-global" id="global">
         <div className="background-texture">

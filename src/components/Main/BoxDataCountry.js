@@ -12,7 +12,7 @@ export class BoxDataCountry extends Component {
     const lastUpdate =
       data_country._lastUpdate === "loading..."
         ? "loading..."
-        : new Date(data_country._lastUpdate).toLocaleDateString();
+        : new Date(data_country._lastUpdate).toLocaleString();
     return (
       <div className="box-data box-data-country" id="country">
         <div className="background-texture">
