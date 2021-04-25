@@ -35,7 +35,7 @@ header {
   width: max-content;
 }
 .infomation .ic--infomation {
-  width: 52px;
+  width: 30px;
 }
 .infomation .infomation--content {
   display: flex;
@@ -167,7 +167,9 @@ main {
   display: flex;
   flex-flow: column;
   justify-content: center;
+  align-items: flex-end;
   width: 100%;
+  position: relative;
 }
 .box-data .box-data__body .box-data--data-covid {
   display: flex;
@@ -242,8 +244,10 @@ main {
   font-family: Redwing-m;
 }
 .box-data .box-data__body .search-box {
-  position: relative;
+  position: absolute;
+  top: -60px;
   width: 40%;
+  margin-right: 35px;
 }
 .box-data .box-data__body .search-box .search {
   width: 100%;

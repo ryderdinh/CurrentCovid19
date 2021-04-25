@@ -9,6 +9,10 @@ export class BoxDataCountry extends Component {
   };
   render() {
     const { data_country } = this.props;
+    const lastUpdate =
+      data_country._lastUpdate === "loading..."
+        ? "loading..."
+        : new Date(data_country._lastUpdate).toLocaleDateString();
     return (
       <div className="box-data box-data-country" id="country">
         <div className="background-texture">
@@ -16,7 +20,7 @@ export class BoxDataCountry extends Component {
         </div>
         <BoxDataHeader title="<country/>" />
         <BoxDataBody typeData={this.state.typeData} dataCovid={data_country} />
-        <BoxDataFooter lastUpdate={data_country._lastUpdate} />
+        <BoxDataFooter lastUpdate={lastUpdate} />
       </div>
     );
   }

@@ -14,14 +14,15 @@ export class BoxDataGlobal extends Component {
 
   render() {
     const { data_global } = this.props;
+    const lastUpdate = new Date(data_global._lastUpdate).toLocaleDateString();
     return (
       <div className="box-data box-data-global" id="global">
         <div className="background-texture">
           <img src="./images/bx-tx.svg" alt="bx-tx" />
         </div>
-        <BoxDataHeader title="global"/>
+        <BoxDataHeader title="global" />
         <BoxDataBody typeData={this.state.type_data} dataCovid={data_global} />
-        <BoxDataFooter lastUpdate={data_global._lastUpdate} />
+        <BoxDataFooter lastUpdate={lastUpdate} />
       </div>
     );
   }

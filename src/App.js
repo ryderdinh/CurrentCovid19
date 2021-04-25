@@ -5,7 +5,7 @@ import "./Responsive.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer";
 import Main from "./components/Main/Main";
-
+import "animate.css";
 function App() {
   return (
     <div className="container">
