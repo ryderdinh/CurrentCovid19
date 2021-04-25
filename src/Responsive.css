@@ -1,0 +1,25 @@
+@media only screen and (max-width: 1400px) {
+  .container {
+    padding: 20px 100px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding: 20px 100px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .container {
+    padding: 20px 100px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 20px 100px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .container {
+    padding: 20px 100px;
+  }
+}
