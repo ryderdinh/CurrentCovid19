@@ -42,7 +42,10 @@
     height: max-content;
   }
   .box-data {
-    width: 90%;
+    width: 352px;
+  }
+  .box-data .box-data__body .box-data--data-covid {
+    padding: 0;
   }
   .infomation {
     justify-content: flex-start;
@@ -86,5 +89,25 @@
   }
   .box-data {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 394px) {
+  .container {
+    padding: 20px;
+  }
+  .box-data .box-data__body .box-data--data-covid .data-covid--item {
+    margin-top: 45px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .box-data
+    .box-data__body
+    .box-data--data-covid
+    .data-covid--item
+    .data-covid--number {
+    font-size: 22px;
+  }
+  .box-data {
+    padding: 20px;
   }
 }

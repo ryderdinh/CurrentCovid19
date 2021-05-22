@@ -177,7 +177,7 @@ main {
   align-items: flex-end;
   width: 100%;
   position: relative;
-  margin: 25px 0;
+  margin: 25px 0 45px;
 }
 .box-data .box-data__body .box-data--data-covid {
   display: flex;
