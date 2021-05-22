@@ -102,6 +102,7 @@ main {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 .box-data {
   position: relative;
