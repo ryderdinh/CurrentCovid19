@@ -5,7 +5,6 @@
   width: 100%;
   min-height: 100vh;
   padding: 20px 200px 3%;
-  overflow-y: scroll;
 }
 
 .background-texture {
@@ -159,8 +158,10 @@ main {
   height: 32px;
   cursor: pointer;
 }
-.box-data .box-data__header .btn-reload:hover {
-  animation: rotate2d 1s infinite both;
+.box-data .box-data__header .btn-reload:hover,
+.box-data .box-data__header .btn-reload:focus {
+  animation: rotate2d 1s both;
+  -webkit-animation: rotate2d 1s;
 }
 .box-data .box-data__header .btn-reload .reload {
   width: 100%;
