@@ -2,24 +2,89 @@
   .container {
     padding: 20px 100px;
   }
+  .box-data {
+    width: 40%;
+    max-width: none;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .container {
     padding: 20px 100px;
+  }
+  .box-data {
+    width: 45%;
   }
 }
 @media only screen and (max-width: 992px) {
   .container {
     padding: 20px 100px;
   }
+  main {
+    max-height: max-content;
+  }
+  .ctn-ctn {
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  .box-data {
+    width: 60%;
+  }
+  .box-data + .box-data {
+    margin-top: 60px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .container {
     padding: 20px 100px;
   }
+  header {
+    height: max-content;
+  }
+  .box-data {
+    width: 90%;
+  }
+  .infomation {
+    justify-content: flex-start;
+    /* padding-top: 5px; */
+  }
+  .infomation .infomation--content {
+    display: none;
+  }
+  .box-data .box-data__body .search-box {
+    margin: 0 0 20px;
+    width: 100%;
+  }
+  .box-data .box-data__body .search-box .search {
+    font-size: 18px;
+    height: 45px;
+    padding-left: 15px;
+  }
+  .box-data .box-data__body .search-box .ic {
+    right: 15px;
+  }
+  .box-data .box-data__body .search-box .drop-down-box .drop-down--item {
+    padding: 15px;
+  }
+  .box-data .box-data__body .search-box .drop-down-box {
+    height: 220px;
+  }
+  .logo .ic--covid {
+    width: 80px;
+    margin-left: 7.85px;
+  }
+  .logo .logo--name img {
+    width: 160px;
+  }
+  .logo .logo--name .logo-covid p {
+    font-size: 23px;
+  }
 }
 @media only screen and (max-width: 576px) {
   .container {
-    padding: 20px 100px;
+    padding: 20px 40px;
+  }
+  .box-data {
+    width: 100%;
   }
 }

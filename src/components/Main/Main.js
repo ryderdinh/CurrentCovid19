@@ -6,8 +6,10 @@ export class Main extends Component {
   render() {
     return (
       <main>
-        <BoxDataCountry />
-        <BoxDataGlobal />
+        <div className="ctn-ctn">
+          <BoxDataCountry />
+          <BoxDataGlobal />
+        </div>
       </main>
     );
   }
