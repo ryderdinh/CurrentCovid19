@@ -115,6 +115,7 @@ main {
   box-shadow: 20px -22px 0px #000000;
   padding: 24px;
   max-width: 430px;
+  border: 4px solid black;
 }
 .box-data .background-texture {
   width: 42px;
@@ -160,9 +161,13 @@ main {
   cursor: pointer;
 }
 .box-data .box-data__header .btn-reload:hover,
-.box-data .box-data__header .btn-reload:focus {
-  animation: rotate2d 1s both;
-  -webkit-animation: rotate2d 1s;
+.box-data .box-data__header .btn-reload:active {
+  animation: rotate2d 1s both 3;
+  -webkit-animation: rotate2d 1s both 3;
+}
+.box-data .box-data__header .btn-reload.active {
+  animation: rotate2d 1s both 3;
+  -webkit-animation: rotate2d 1s both 3;
 }
 .box-data .box-data__header .btn-reload .reload {
   width: 100%;
