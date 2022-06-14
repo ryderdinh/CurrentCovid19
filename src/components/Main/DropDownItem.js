@@ -1,21 +1,17 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { getDataCountry } from "../../actions";
-export class DropDownItem extends Component {
-  render() {
-    const { nameCountry } = this.props;
-    return (
-      <div
-        className="drop-down--item"
-        onClick={() => {
-          this.props.setValueInput(nameCountry);
-          this.props.getDataCountry(nameCountry);
-          this.props.showDropDown();
-        }}
-      >
-        {nameCountry}
-      </div>
-    );
-  }
+import useStore from 'store/useStore'
+
+export const DropDownItem = ({ countryName, onClick }) => {
+	const { fetchCountryData } = useStore()
+
+	return (
+		<div
+			className='drop-down--item'
+			onClick={() => {
+				onClick()
+				fetchCountryData(countryName)
+			}}
+		>
+			{countryName}
+		</div>
+	)
 }
-export default connect(null, { getDataCountry })(DropDownItem);

@@ -1,34 +1,27 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import BoxDataBody from "./BoxDataBody";
-import BoxDataFooter from "./BoxDataFooter";
-import BoxDataHeader from "./BoxDataHeader";
-import { getDataGlobal } from "../../actions";
-export class BoxDataGlobal extends Component {
-  state = {
-    type_data: "data-global",
-  };
-  componentDidMount() {
-    this.props.getDataGlobal();
-  }
+import { useEffect } from 'react'
+import useStore from '../../store/useStore'
+import BoxDataBody from './BoxDataBody'
+import BoxDataFooter from './BoxDataFooter'
+import BoxDataHeader from './BoxDataHeader'
 
-  render() {
-    const { data_global } = this.props;
-    const lastUpdate = new Date(data_global._lastUpdate).toLocaleString();
-    return (
-      <div className="box-data box-data-global" id="global">
-        <div className="background-texture">
-          <img src="./images/bx-tx.svg" alt="bx-tx" />
-        </div>
-        <BoxDataHeader title="global" />
-        <BoxDataBody typeData={this.state.type_data} dataCovid={data_global} />
-        <BoxDataFooter lastUpdate={lastUpdate} />
-      </div>
-    );
-  }
+const type_data = 'data-global'
+
+export const BoxDataGlobal = () => {
+	const { _data, loading, error } = useStore(state => state._globalData)
+	const { fetchGlobalData } = useStore()
+
+	useEffect(() => {
+		fetchGlobalData()
+	}, [fetchGlobalData])
+
+	return (
+		<div className='box-data box-data-global' id='global'>
+			<div className='background-texture'>
+				<img src='./images/bx-tx.svg' alt='bx-tx' />
+			</div>
+			<BoxDataHeader title='global' reload={fetchGlobalData} />
+			<BoxDataBody typeData={type_data} dataCovid={_data} loading={loading} />
+			<BoxDataFooter lastUpdate={_data._lastUpdate} />
+		</div>
+	)
 }
-
-const mapStateToProps = (state) => ({
-  data_global: state.global._global,
-});
-export default connect(mapStateToProps, { getDataGlobal })(BoxDataGlobal);
